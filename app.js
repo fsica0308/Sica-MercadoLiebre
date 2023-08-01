@@ -10,6 +10,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './views/home.html'));
 });
 
-app.listen(4000, () => {
-    console.log('Server ON');
+const PORT = 4000;
+
+app.listen(PORT, () => {
+    console.log('Server ON en puerto ' + PORT);
 });
