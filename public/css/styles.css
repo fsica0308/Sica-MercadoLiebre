@@ -1,14 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #ebebeb;
     font-family: 'Roboto', sans-serif;
 }
+
 .encabezado {
     background-color: #EAC926;
     font-size: 22px;
-}
-*{
-    padding: 0;
-    margin: 0;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 img {
@@ -31,6 +36,7 @@ ul {
 
 .titulares {
     font-size: 24px;
+    color: #666;
 }
 
 .precios {
@@ -39,10 +45,13 @@ ul {
 
 .descuentos {
     font-size: 16px;
+    color: #39b54a;
 }
 
 .descripciones {
     font-size: 16px;
+    color: #666;
+    padding-top: 25px;
 }
 
 .msg-cuo-tar {
@@ -50,11 +59,12 @@ ul {
 }
 
 .burger-menu {
-    margin-left: 165px;
-    margin-right: 165px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #03264C;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
+    width: 12vw;
 }
 
 .fa-bars {
@@ -80,4 +90,65 @@ footer {
     font-size: 2em;
     margin-bottom: 10px;
     color: #03264C;
+}
+
+main {
+    box-sizing: border-box;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article {
+    margin-bottom: 10px;
+    background-color: white;
+    padding: 5px;
+}
+
+.info-articulo {
+    box-sizing: border-box;
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+}
+
+.fa-truck {
+    color: #39b54a;
+    border: solid 1px #39b54a;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 10px;
+}
+
+nav {
+    display: none;
+}
+
+/* tablet */
+@media (min-width: 520px){
+    .md-box-shadow {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    nav {
+        display: contents;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+}
+
+/* desktop */
+@media (min-width: 1280px){
+    .md-box-shadow {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    nav {
+        display: contents;
+    }
+
+    .burger-menu {
+        display: none;
+    }
 }
