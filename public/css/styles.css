@@ -9,15 +9,24 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    column-gap: 50px;
+}
+
 .encabezado {
     background-color: #EAC926;
     font-size: 22px;
     padding: 20px;
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 img {
-    width: 80%;
+    width: 100%;
 }
 
 ul {
@@ -41,11 +50,15 @@ ul {
 
 .precios {
     font-size: 18px;
+    width: 30%;
+    flex-grow: 0.5;
 }
 
 .descuentos {
     font-size: 16px;
     color: #39b54a;
+    width: 70%;
+    flex-grow: 0.5;
 }
 
 .descripciones {
@@ -109,18 +122,46 @@ article {
     box-sizing: border-box;
     border-top: solid 1px #ebebeb;
     padding: 15px;
+    position: relative;
+    display: flex;
+    justify-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .fa-truck {
-    color: #39b54a;
-    border: solid 1px #39b54a;
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
     border-radius: 50%;
-    font-size: 20px;
-    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: -15px;
 }
 
 nav {
     display: none;
+}
+
+.productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.prod {
+    width: 100%;
+}
+
+.logo {
+    width: 50%;
+}
+
+.barra-busqueda {
+    width: 50%;
 }
 
 /* tablet */
@@ -130,11 +171,27 @@ nav {
     }
 
     nav {
-        display: contents;
+        display: block;
     }
 
     .burger-menu {
         display: none;
+    }
+    /*
+    .productos {
+        justify-content: space-around;
+    }
+    .prod {
+        width: 50%;
+    }*/
+    .productos {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 5%;
+    }
+
+    .prod {
+        width: 100%;
     }
 }
 
@@ -145,10 +202,20 @@ nav {
     }
 
     nav {
-        display: contents;
+        display: block;
     }
 
     .burger-menu {
         display: none;
+    }
+
+    .productos {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 5%;
+    }
+
+    .prod {
+        width: 100%;
     }
 }
