@@ -9,18 +9,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    row-gap: 50px;
-    column-gap: 50px;
-}
-
 .encabezado {
     background-color: #EAC926;
     font-size: 22px;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -33,70 +25,64 @@ ul {
     list-style-type: none;
 }
 
-.nav1 {
+.navs {
     color: black;
     text-decoration: none;
-}
-
-.nav2 {
-    color: black;
-    text-decoration: none;
+    padding: 8px;
 }
 
 .titulares {
     font-size: 24px;
     color: #666;
+    width: 100%;
 }
 
 .precios {
     font-size: 18px;
-    width: 30%;
-    flex-grow: 0.5;
+    margin-right: 8px;
 }
 
 .descuentos {
     font-size: 16px;
     color: #39b54a;
-    width: 70%;
-    flex-grow: 0.5;
 }
 
 .descripciones {
     font-size: 16px;
     color: #666;
-    padding-top: 25px;
+    padding-top: 10px;
+    width: 100%;
 }
 
 .msg-cuo-tar {
-    align-content: center;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
-.burger-menu {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #03264C;
-    padding: 10px;
+.burger-menu {    
     text-align: center;
-    width: 12vw;
+    width: 100%;
 }
 
 .fa-bars {
     color: white;
-    font-size: 30px;
-    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #03264C;
+    font-weight: bold;
 }
 
 footer {
     background-color: white;
-}
-
-footer {
     text-align: center;
-    padding: 10%;
+    padding: 20px;
+    width: 100%;
 }
 
 .footer-article {
-    padding-top: 20%;
+    padding-top: 30px;
 }
 
 .icon-footer {
@@ -110,10 +96,13 @@ main {
     width: 90vw;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 article {
     margin-bottom: 10px;
+    margin-top: 10px;
     background-color: white;
     padding: 5px;
 }
@@ -121,21 +110,17 @@ article {
 .info-articulo {
     box-sizing: border-box;
     border-top: solid 1px #ebebeb;
-    padding: 15px;
+    padding: 10px;
     position: relative;
     display: flex;
-    justify-items: flex-start;
     flex-wrap: wrap;
 }
 
-.fa-truck {
-    display: block;
-    font-size: 16px;
+.icono-envio {
     padding: 5px;
-    width: 30px;
-    height: 30px;
     border: 1px solid #39b54a;
     background-color: #FFF;
+    color: #39b54a;
     border-radius: 50%;
     position: absolute;
     right: 20px;
@@ -148,8 +133,9 @@ nav {
 
 .productos {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
 }
 
 .prod {
@@ -162,10 +148,35 @@ nav {
 
 .barra-busqueda {
     width: 50%;
+    padding: 20px;
+    align-self: center;
+}
+
+.barra-action {
+    padding: 10px;
+    display: flex;
+    border-radius: 5px;
+}
+
+.barra-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.barra-button {
+    border: none;
+}
+
+.banner {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* tablet */
-@media (min-width: 520px){
+@media (min-width: 768px){
     .md-box-shadow {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
@@ -177,21 +188,57 @@ nav {
     .burger-menu {
         display: none;
     }
-    /*
-    .productos {
-        justify-content: space-around;
-    }
-    .prod {
-        width: 50%;
-    }*/
-    .productos {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 5%;
-    }
 
     .prod {
+        width: 48%;
+    }
+
+    .logo {
+        width: 33%;
+    }
+
+    .barra-busqueda {
+        width: 33%;
+    }
+
+    .msg-cuo-tar {
+        width: 33%;
+        padding: 20px;
+        align-self: center;
+    }
+     
+    .menus {
+        display: flex;
+        justify-content: space-between;
         width: 100%;
+        padding-top: 30px;
+        font-size: 2vw; 
+    }
+
+    .navs {
+        padding: auto;
+    }
+
+    .menu1{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 2%;
+        margin-left: 22px;
+    }
+
+    .menu2{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-end;
+        gap: 2%;
+        margin-right: 22px;
+    }
+
+    .encabezado {
+        align-items: center;
     }
 }
 
@@ -209,13 +256,46 @@ nav {
         display: none;
     }
 
-    .productos {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        gap: 5%;
+    .prod {
+        width: 23%;
     }
 
-    .prod {
+    .logo {
+        width: 33%;
+    }
+
+    .barra-busqueda {
+        width: 33%;
+    }
+
+    .msg-cuo-tar {
+        width: 33%;
+        padding: 20px;
+        align-self: center;
+    }
+     
+    .menus {
+        display: flex;
+        justify-content: space-between;
         width: 100%;
+        padding-top: 30px;
+    }
+
+    .menu1{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 20px;
+        margin-left: 25px;
+    }
+
+    .menu2{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-end;
+        gap: 20px;
+        margin-right: 25px;
     }
 }
