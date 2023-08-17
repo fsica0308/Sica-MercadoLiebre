@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Mercado Liebre</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="/css/style-register.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="encabezado">
+        <h1 class="logo">
+            <img src="/images/logo-mercado-liebre.svg" alt="Mercado Liebre">
+        </h1>
+        <div class="barra-busqueda">
+            <form action="/" class="barra-action">
+                <input class="barra-input" type="text" name="search"
+                    placeholder="Buscá productos por nombre, marcas o palabras clave" />
+                <button type="submit" class="barra-button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        <p class="msg-cuo-tar">
+            <i class="fa-solid fa-hand-holding-dollar"></i>Comprá en cuotas y sin tarjeta de crédito
+        </p>
+        <nav class="menus">
+            <ul class="menu1">
+                <li><a href="#" class="navs">Ofertas</a></li>
+                <li><a href="#" class="navs">Tiendas Oficiales</a></li>
+                <li><a href="#" class="navs">Vender</a></li>
+                <li><a href="#" class="navs">Ayuda</a></li>
+            </ul>
+            <ul class="menu2">
+                <li><a href="/register" class="navs">Creá tu cuenta</a><i class="fa-regular fa-id-card"></i></li>
+                <li><a href="/login" class="navs">Ingresá</a><i class="fa-solid fa-right-to-bracket"></i></li>
+                <li><a href="#" class="navs">Mis compras</a><i class="fa-solid fa-basket-shopping"></i></li>
+            </ul>
+        </nav>  
+        <div class="burger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>    
+    </header>
+    <main>
+        <form action="/register" method="POST" class="formulario">
+            <p>
+                <label for="nomape"></label>
+                <input type="text" name="nomape" id="nomape" placeholder="Nombre y Apellido" required class="nomape">
+            </p>
+            <p>
+                <label for="usuario"></label>
+                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" required class="user">
+            </p>
+            <p>
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Email" required class="mail">
+            </p>
+            <p>
+                <input type="date" name="fecha" min="1900-01-01" max="2023-08-17" required class="fecha">
+            </p>
+            <p>
+                <input type="file" name="avatar" accept=".jpg" accept=".png" class="pfp">
+            </p>
+            <p>
+                <label for="domicilio"></label>
+                <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio" required class="domicilio">
+            </p>
+            <p>
+                <label for="password"></label>
+                <input type="password" name="password" id="password" placeholder="Contraseña" required class="pass">
+            </p>
+            <p>
+                <label for="repassword"></label>
+                <input type="password" name="repassword" id="repassword" placeholder="Confirmar contraseña" required class="repass">
+            </p>
+            <p>
+                <label for="perfil" class="perfil">Perfil de usuario:</label> 
+                <input type="radio" name="perfil" value="Comprador" class="perfil">Comprador
+                <input type="radio" name="perfil" value="Vendedor" class="perfil"> Vendedor
+            </p>
+            <p>
+                <label for="intereses" class="intereses">Intereses:</label> 
+                <input type="checkbox" name="intereses" value="Electro">Electro
+                <input type="checkbox" name="intereses" value="Moda">Moda
+                <input type="checkbox" name="intereses" value="Hogar">Hogar
+                <input type="checkbox" name="intereses" value="Jugueteria">Jugueteria
+                <input type="checkbox" name="intereses" value="Vida sana">Vida sana
+            </p>
+            <p>
+                <button type="submit" href="/home" required class="env-can">Enviar</button>
+            </p>
+            <p>
+                <button type="reset"required class="env-can">Cancelar</button>
+            </p>
+        </form>        
+    </main>
+    <footer>
+        <section class="footer-article">
+            <i class="fa-solid fa-credit-card icon-footer"></i>
+            <h4>Pagá con tarjeta o en efectivo</h4>
+            <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+        </section>
+        <section class="footer-article">
+            <i class="fa-solid fa-gift icon-footer"></i>
+            <h4>Envío gratis desde $2.500</h4>
+            <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+        </section>
+        <section class="footer-article">
+            <i class="fa-solid fa-user-shield icon-footer"></i>
+            <h4>Seguridad, de principio a fin</h4>
+            <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+        </section>
+        <section class="footer-article">
+            <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+        </section>
+    </footer>
+</body>
+</html>

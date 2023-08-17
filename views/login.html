@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Mercado Liebre</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,8 +14,53 @@
     <link href="/css/style-login.css" rel="stylesheet"/>
 </head>
 <body>
+    <header class="encabezado">
+        <h1 class="logo">
+            <img src="/images/logo-mercado-liebre.svg" alt="Mercado Liebre">
+        </h1>
+        <div class="barra-busqueda">
+            <form action="/" class="barra-action">
+                <input class="barra-input" type="text" name="search"
+                    placeholder="Buscá productos por nombre, marcas o palabras clave" />
+                <button type="submit" class="barra-button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        <p class="msg-cuo-tar">
+            <i class="fa-solid fa-hand-holding-dollar"></i>Comprá en cuotas y sin tarjeta de crédito
+        </p>
+        <nav class="menus">
+            <ul class="menu1">
+                <li><a href="#" class="navs">Ofertas</a></li>
+                <li><a href="#" class="navs">Tiendas Oficiales</a></li>
+                <li><a href="#" class="navs">Vender</a></li>
+                <li><a href="#" class="navs">Ayuda</a></li>
+            </ul>
+            <ul class="menu2">
+                <li><a href="/register" class="navs">Creá tu cuenta</a><i class="fa-regular fa-id-card"></i></li>
+                <li><a href="/login" class="navs">Ingresá</a><i class="fa-solid fa-right-to-bracket"></i></li>
+                <li><a href="#" class="navs">Mis compras</a><i class="fa-solid fa-basket-shopping"></i></li>
+            </ul>
+        </nav>  
+        <div class="burger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>    
+    </header>
     <main>
-        
+        <form action="/login" method="POST" class="formulario">
+            <p>
+                <label for="usuario"></label>
+                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" required class="user-pass">
+            </p>
+            <p>
+                <label for="password"></label>
+                <input type="password" name="password" id="password" placeholder="Elgí tu contraseña" required class="user-pass">
+            </p>
+            <p>
+                <button type="submit" required class="enviar">Enviar</button>
+            </p>
+        </form>        
     </main>
     <footer>
         <section class="footer-article">

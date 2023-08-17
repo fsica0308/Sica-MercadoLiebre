@@ -97,7 +97,6 @@ footer {
     text-align: center;
     padding: 20px;
     width: 100%;  
-    position: fixed;
     bottom: 0; 
 }
 
@@ -122,16 +121,7 @@ footer {
     align-content: center;
 }
 
-.user-pass {
-    background-color: white;
-    width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    height: 50px;
-}
-
-.enviar {
+.env-can {
     color: white;
     background-color: #03264C;
     width: 100%;
@@ -143,6 +133,23 @@ footer {
 
 .formulario ::placeholder {
     padding-left: 3%; 
+    font-size: 20px;
+ }
+
+ .nomape, .user, .pfp, .mail, .fecha, .domicilio, .pass, .repass {
+    background-color: white;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 50px;
+ }
+
+ .perfil {
+    font-size: 20px;
+ }
+
+ .intereses {
     font-size: 20px;
  }
 
