@@ -260,4 +260,23 @@ footer {
         gap: 20px;
         margin-right: 25px;
     }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;  
+    }
+
+    .footer-article {
+        width: 33%;
+    }
+
+    .icon-footer:hover {
+        color: #EAC926;
+    }
+
+    .text-copy {
+        padding-left: 10px;
+    }
 }
