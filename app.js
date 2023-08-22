@@ -9,7 +9,7 @@ app.use(express.static(publicPath));
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
-    console.log('Server ON en puerto ' + PORT);
+    console.log(`Server ON en puerto ${PORT}`);
 });
 
 app.get('/', (req, res) => {
