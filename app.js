@@ -6,7 +6,7 @@ const app = express();
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
-const PORT = 4000;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
     console.log('Server ON en puerto ' + PORT);
